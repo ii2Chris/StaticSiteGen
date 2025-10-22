@@ -1,7 +1,4 @@
 from functions.textnode import TextNode, TextType
 
-def main():
+def split_nodes_delimiter(old_nodes, delimiter, text_type):
     pass
-
-if __name__ == "__main__":
-    main()
