@@ -76,7 +76,6 @@ class TestTextToHtml(unittest.TestCase):
             text_node_to_html_node(node)
 
     def test_invalid_input(self):
-
         with self.assertRaises(Exception):
             text_node_to_html_node(node)
 

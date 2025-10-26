@@ -5,7 +5,7 @@ def split_nodes_delimiter(old_nodes, delimiter, text_type):
     BASE = TextType.PLAIN
 
     for node in old_nodes:
-        if node.text_type != BASE:
+        if node.text_type != TextType.PLAIN:
             new_nodes.append(node)
             continue
 
