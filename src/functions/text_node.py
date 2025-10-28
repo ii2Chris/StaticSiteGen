@@ -1,14 +1,14 @@
 from enum import Enum
 
 class TextType(Enum):
-    PLAIN = "plain"
-    BOLD = "**bold**"
-    ITALIC = "_italic_"
-    UNDERLINE = "<u>underline</u>"
-    STRIKETHROUGH = "~~strikethrough~~"
-    CODE = "`code`"
-    LINK = "[link](http://example.com)"
-    IMAGE = "![alt text](image.jpg)"
+    TEXT = "text"
+    BOLD = "bold"
+    ITALIC = "italic"
+    UNDERLINE = "underline"
+    STRIKETHROUGH = "strikethrough"
+    CODE = "code"
+    LINK = "link"
+    IMAGE = "image"
 
 
 class TextNode:

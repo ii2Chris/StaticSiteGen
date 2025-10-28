@@ -1,7 +1,7 @@
 from platform import node
 import unittest
 
-from functions.textnode import TextNode, TextType
+from functions.text_node import TextNode, TextType
 from functions.split_node_delimiter import split_nodes_delimiter
 
 BASE = getattr(TextType, "PLAIN", None) or getattr(TextType, "TEXT", None)

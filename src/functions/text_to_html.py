@@ -1,12 +1,12 @@
-from functions.htmlnode import HTMLNode, LeafNode, ParentNode
-from functions.textnode import TextNode, TextType
+from .html_node import LeafNode
+from .text_node import TextNode, TextType
 
 def text_node_to_html_node(text_node):
     if not isinstance(text_node, TextNode):
         raise Exception("Input must be a TextNode instance")
 
     # Basic mapping from TextNode to HTMLNode
-    if text_node.text_type == TextType.PLAIN: return LeafNode(None, text_node.text)
+    if text_node.text_type == TextType.TEXT: return LeafNode(None, text_node.text)
 
     if text_node.text_type == TextType.BOLD: return LeafNode("b", text_node.text)
 

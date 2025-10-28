@@ -1,11 +1,10 @@
-from functions.textnode import TextNode, TextType
+from .text_node import TextNode, TextType
 
 def split_nodes_delimiter(old_nodes, delimiter, text_type):
     new_nodes = []
-    BASE = TextType.PLAIN
 
     for node in old_nodes:
-        if node.text_type != TextType.PLAIN:
+        if node.text_type != TextType.TEXT:
             new_nodes.append(node)
             continue
 
@@ -27,7 +26,7 @@ def split_nodes_delimiter(old_nodes, delimiter, text_type):
                 if part == "" and (i == 0 or i == last):
                     continue
                 if part != "":
-                    new_nodes.append(TextNode(part, BASE))
+                    new_nodes.append(TextNode(part, TextType.TEXT))
             else:
                 # odd: target type — allow empty (adjacent delimiters)
                 new_nodes.append(TextNode(part, text_type))

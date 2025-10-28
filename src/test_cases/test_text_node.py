@@ -1,6 +1,6 @@
 import unittest
 
-from functions.textnode import TextNode, TextType
+from functions.text_node import TextNode, TextType
 
 class TestTextNode(unittest.TestCase):
     def test_eq(self):
@@ -11,13 +11,13 @@ class TestTextNode(unittest.TestCase):
     # I thank gpt-4 for the following test cases even though I should've written them myself teehee
     def test_neq_different_text(self):
         # Different text should make nodes unequal
-        n1 = TextNode("First", TextType.PLAIN)
-        n2 = TextNode("Second", TextType.PLAIN)
+        n1 = TextNode("First", TextType.TEXT)
+        n2 = TextNode("Second", TextType.TEXT)
         self.assertNotEqual(n1, n2)
 
     def test_neq_different_text_type(self):
         # Same text but different text_type should be unequal
-        n1 = TextNode("Same text", TextType.PLAIN)
+        n1 = TextNode("Same text", TextType.TEXT)
         n2 = TextNode("Same text", TextType.BOLD)
         self.assertNotEqual(n1, n2)
 
@@ -34,7 +34,7 @@ class TestTextNode(unittest.TestCase):
 
     def test_compare_with_non_textnode(self):
         # Comparing with a non-TextNode should return False (not equal)
-        n = TextNode("X", TextType.PLAIN)
+        n = TextNode("X", TextType.TEXT)
         self.assertNotEqual(n, "not a node")
 
 

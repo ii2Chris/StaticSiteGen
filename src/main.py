@@ -1,4 +1,4 @@
-from functions.textnode import TextNode, TextType
+from functions.text_node import TextNode, TextType
 
 def main():
     pass

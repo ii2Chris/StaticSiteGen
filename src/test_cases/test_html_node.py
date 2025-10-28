@@ -1,6 +1,6 @@
 import unittest
 
-from functions.htmlnode import HTMLNode, LeafNode, ParentNode
+from functions.html_node import HTMLNode, LeafNode, ParentNode
 
 class TestHTMLNode(unittest.TestCase):
     # Testing HTMLNode class
